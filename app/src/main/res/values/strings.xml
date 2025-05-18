@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Language</string>
+    <string name="logout_icon">Logout</string>
+    <string name="alarm_clock_icon">Alarm Clock Icon</string>
+    <string name="minus_icon">Minus button</string>
+    <string name="plus_icon">Plus button</string>
+    <string name="profile_icon">Profile Icon</string>
+    <string name="home">Home Icon</string>
+
+
+</resources>

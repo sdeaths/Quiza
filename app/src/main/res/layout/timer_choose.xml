@@ -1,0 +1,164 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/rectangle_288">
+
+    <!-- Заголовок языка -->
+    <TextView
+        android:id="@+id/languageTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/abel"
+        android:textStyle="normal"
+        android:textSize="24sp"
+        android:textColor="?attr/text"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="14dp"
+        android:text="English Quiz" />
+
+    <!-- Заголовок выбранных сетов -->
+    <TextView
+        android:id="@+id/selectedSetTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/abel"
+        android:textStyle="normal"
+        android:textSize="20sp"
+        android:textColor="?attr/text"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="51dp"
+        android:text="My Set, Travel Set" />
+
+    <!-- Иконка logout -->
+    <ImageView
+        android:id="@+id/logoutIcon"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="29dp"
+        android:layout_marginEnd="27dp"
+        android:src="@drawable/logout"
+        android:contentDescription="@string/logout_icon" />
+
+    <!-- Основная форма -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/selectedSetTitle"
+        android:layout_marginTop="12dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/rectangle_1" />
+
+    <!-- Текст "Длительность раунда" -->
+    <TextView
+        android:id="@+id/roundDurationText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/alegreya_sans"
+        android:textStyle="normal"
+        android:textSize="30sp"
+        android:textColor="#000000"
+        android:text="Длительность раунда"
+        android:layout_below="@id/selectedSetTitle"
+        android:layout_marginTop="106dp"
+        android:layout_centerHorizontal="true"/>
+
+    <!-- Контейнер таймера -->
+    <RelativeLayout
+        android:id="@+id/timerContainer"
+        android:layout_width="320dp"
+        android:layout_height="300dp"
+        android:layout_below="@id/roundDurationText"
+        android:layout_marginTop="22dp"
+        android:layout_marginStart="31dp"
+        android:layout_marginEnd="31dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/rectangle_551"
+        android:paddingHorizontal="16dp">
+
+        <!-- Иконка часов -->
+        <ImageView
+            android:id="@+id/alarmClockIcon"
+            android:layout_width="100dp"
+            android:layout_height="134.3dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="45dp"
+            android:src="@drawable/alarm_clock"
+            android:contentDescription="@string/alarm_clock_icon"/>
+
+        <!-- Горизонтальный контейнер для таймера и кнопок -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/alarmClockIcon"
+            android:layout_marginTop="13.4dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <!-- Кнопка минус -->
+            <ImageView
+                android:id="@+id/minusIcon"
+                android:layout_width="25dp"
+                android:layout_height="33.6dp"
+                android:layout_marginEnd="16dp"
+                android:contentDescription="@string/minus_icon"
+                android:src="@drawable/minus" />
+
+            <!-- Таймер -->
+            <TextView
+                android:id="@+id/timerText"
+                android:layout_width="wrap_content"
+                android:layout_height="61.8dp"
+                android:minWidth="120dp"
+                android:gravity="center"
+                android:fontFamily="@font/abel"
+                android:textStyle="normal"
+                android:textSize="36sp"
+                android:textColor="?attr/text"
+                android:includeFontPadding="false"
+                tools:text="01 : 00"/>
+
+            <!-- Кнопка плюс -->
+            <ImageView
+                android:id="@+id/plusIcon"
+                android:layout_width="25dp"
+                android:layout_height="33.6dp"
+                android:layout_marginStart="16dp"
+                android:contentDescription="@string/plus_icon"
+                android:src="@drawable/plus" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!-- Кнопка "Начать" -->
+    <FrameLayout
+        android:id="@+id/startButton"
+        android:layout_width="106dp"
+        android:layout_height="45dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/rectangle_27">
+
+        <TextView
+            android:id="@+id/startButtonText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:fontFamily="@font/alegreya_sans"
+            android:textColor="?attr/text"
+            android:textSize="18sp"
+            android:textStyle="normal"
+            android:text="Начать"
+            android:padding="8dp"/>
+    </FrameLayout>
+
+</RelativeLayout>
+
+
+
+

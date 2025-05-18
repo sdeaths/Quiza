@@ -1,0 +1,10 @@
+<!-- Code for drawable-bright -->
+<shape
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="?attr/lavander_violet" />
+    <stroke
+        android:width="2dp"
+        android:color="#000000" />
+    <corners android:radius="20dp"/>
+</shape>

@@ -1,0 +1,186 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/rectangle_288">
+
+    <!-- Заголовок Имя Игрока -->
+    <TextView
+        android:id="@+id/languageTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="14dp"
+        android:fontFamily="@font/abel"
+        android:text="Имя"
+        android:textColor="?attr/text"
+        android:textSize="24sp"
+        android:textStyle="normal" />
+
+    <!-- Иконка выхода из системы -->
+    <ImageView
+        android:id="@+id/logoutIcon"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="27dp"
+        android:layout_marginTop="14dp"
+        android:contentDescription="@string/logout_icon"
+        android:src="@drawable/logout" />
+
+    <!-- Контейнер для заголовка сетов с горизонтальной прокруткой -->
+    <HorizontalScrollView
+        android:id="@+id/setsScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/languageTitle"
+        android:layout_toStartOf="@id/logoutIcon"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="8dp"
+        android:scrollbars="none"
+        android:fillViewport="true">
+
+        <!-- Заголовок выбранных сетов -->
+        <TextView
+            android:id="@+id/selectedSetTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/abel"
+            android:textColor="?attr/text"
+            android:textSize="20sp"
+            android:textStyle="normal"
+            android:ellipsize="end"
+            android:maxLines="1"
+            tools:text="Мой набор, набор для путешествий, еще один набор, дополнительный сет" />
+    </HorizontalScrollView>
+
+    <!-- Основная форма -->
+    <RelativeLayout
+        android:id="@+id/mainForm"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/setsScrollView"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/rectangle_1">
+
+        <!-- Контейнер для результатов -->
+        <RelativeLayout
+            android:id="@+id/WordContainer"
+            android:layout_width="298dp"
+            android:layout_height="420dp"
+            android:layout_marginTop="93dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/rectangle_551"
+            android:clipChildren="false"
+            android:clipToPadding="false">
+
+            <!-- Заголовок: Имя игрока -->
+            <TextView
+                android:id="@+id/playerName"
+                android:layout_width="wrap_content"
+                android:layout_height="34dp"
+                android:layout_marginTop="30dp"
+                android:layout_centerHorizontal="true"
+                android:maxWidth="250dp"
+                android:fontFamily="@font/abel"
+                android:textStyle="normal"
+                android:textSize="28sp"
+                android:textColor="?attr/text"
+                android:gravity="center_horizontal"
+                android:ellipsize="end"
+                tools:text="Liza" />
+
+            <!-- Общий контейнер для колонок -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/playerName"
+                android:layout_above="@+id/bottomSpace"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:paddingLeft="23dp"
+                android:paddingRight="23dp"
+                android:weightSum="2">
+
+                <!-- Угаданные слова -->
+                <ScrollView
+                    android:id="@+id/guessedScrollView"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fillViewport="true">
+
+                    <TextView
+                        android:id="@+id/guessedWords"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/abel"
+                        android:gravity="center_horizontal"
+                        android:paddingBottom="10dp"
+                        android:textColor="?attr/text_success"
+                        android:textSize="24sp"
+                        android:textStyle="normal"
+                        tools:text="text\ntext\ntext\ntext\ntext\ntext\ntext\ntext\ntext\ntext\ntext\ntext\ntext\ntext\ntext\ntext" />
+                </ScrollView>
+
+                <!-- Неугаданные слова -->
+                <ScrollView
+                    android:id="@+id/notGuessedScrollView"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fillViewport="true">
+
+                    <TextView
+                        android:id="@+id/notGuessedWords"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/abel"
+                        android:gravity="center_horizontal"
+                        android:paddingBottom="10dp"
+                        android:textColor="?attr/text_failure"
+                        android:textSize="24sp"
+                        android:textStyle="normal"
+                        tools:text="text\ntext\ntext\ntext\ntext\ntext" />
+                </ScrollView>
+            </LinearLayout>
+
+            <!-- Невидимая View для создания отступа снизу -->
+            <View
+                android:id="@+id/bottomSpace"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+
+        <!-- Кнопка «Далее» -->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/WordContainer"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="24dp">
+
+            <FrameLayout
+                android:id="@+id/leftButton"
+                android:layout_width="130dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="21dp"
+                android:background="@drawable/rectangle_266">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/alegreya_sans"
+                    android:gravity="center"
+                    android:text="Далее"
+                    android:textColor="?attr/text"
+                    android:textSize="18sp"
+                    android:textStyle="normal" />
+            </FrameLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

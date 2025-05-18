@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="form_shape_color" format="color"/>
+    <attr name="button_1" format="color"/>
+    <attr name="button_2" format="color"/>
+    <attr name="backgroundColor" format="color"/>
+
+    <attr name="darkblue_green" format="color"/>
+
+
+    <attr name="darcblue_violet" format="color"/>
+
+    <attr name="red_green" format="color"/>
+    <attr name="darkblue_orange" format="color"/>
+    <attr name="red_yellow" format="color"/>
+    <attr name="blue_violet" format="color"/>
+    <attr name="lavander_orange" format="color"/>
+    <attr name="red_white" format="color"/>
+    <attr name="lavander_violet" format="color"/>
+    <attr name="white_orange" format="color"/>
+    <attr name="blue_white" format="color"/>
+    <attr name="text" format="color"/>
+    <attr name="edit_text" format="color"/>
+    <attr name="dialog" format="color"/>
+
+    <attr name="text_success" format="color"/>
+    <attr name="text_failure" format="color"/>
+
+    <attr name="homeIcon" format="reference" />
+</resources>

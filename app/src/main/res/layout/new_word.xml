@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="433dp"
+    android:background="@drawable/rectangle_29"
+    android:layout_marginTop="360dp"
+    android:layout_marginStart="0dp"
+    android:layout_marginEnd="0dp">
+
+    <!-- Текст "Новое слово" с ID -->
+    <TextView
+        android:id="@+id/editTextTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/alegreya_sans"
+        android:textStyle="normal"
+        android:textSize="36sp"
+        android:textColor="@color/text_color"
+        android:text="Новое слово"
+        android:layout_marginTop="29dp"
+        android:layout_marginStart="39dp" />
+
+    <!-- Окошко для слова (EditText вместо TextView) -->
+    <LinearLayout
+        android:id="@+id/wordBox"
+        android:layout_width="289dp"
+        android:layout_height="50dp"
+        android:background="@drawable/rectangle_253"
+        android:layout_below="@id/editTextTitle"
+        android:layout_marginTop="28dp"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <!-- EditText для слова без полоски снизу -->
+        <EditText
+            android:id="@+id/wordInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="28dp"
+            android:fontFamily="@font/a_bee_zee"
+            android:textSize="14sp"
+            android:textColor="@color/text_color"
+            android:hint="Слово"
+            android:inputType="text"
+            android:background="@null"/>
+    </LinearLayout>
+
+    <!-- Окошко для перевода (EditText вместо TextView) -->
+    <LinearLayout
+        android:id="@+id/translationBox"
+        android:layout_width="289dp"
+        android:layout_height="50dp"
+        android:background="@drawable/rectangle_253"
+        android:layout_below="@id/wordBox"
+        android:layout_marginTop="23dp"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <!-- EditText для перевода без полоски снизу -->
+        <EditText
+            android:id="@+id/translationInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="28dp"
+            android:fontFamily="@font/a_bee_zee"
+            android:textSize="14sp"
+            android:textColor="@color/text_color"
+            android:hint="Перевод"
+            android:inputType="text"
+            android:background="@null"/>
+    </LinearLayout>
+
+    <!-- Кнопка -->
+    <Button
+        android:id="@+id/submitButton"
+        android:layout_width="288.7dp"
+        android:layout_height="53.1dp"
+        android:layout_below="@id/translationBox"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/rectangle_261"
+        android:gravity="center"
+        android:text="Сохранить"
+        android:textColor="@color/text_color"
+        android:textSize="24sp"
+        android:textAllCaps="false"
+        android:fontFamily="@font/alegreya_sans"/>
+</RelativeLayout>

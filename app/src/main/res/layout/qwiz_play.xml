@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/rectangle_288">
+
+    <!-- Заголовок Имя Игрока -->
+    <TextView
+        android:id="@+id/languageTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="14dp"
+        android:fontFamily="@font/abel"
+        android:text="Name"
+        android:textColor="?attr/text"
+        android:textSize="24sp"
+        android:textStyle="normal" />
+
+    <!-- Заголовок выбранных сетов -->
+    <TextView
+        android:id="@+id/selectedSetTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/languageTitle"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/abel"
+        android:text="My Set, Travel Set"
+        android:textColor="?attr/text"
+        android:textSize="20sp"
+        android:textStyle="normal" />
+
+    <!-- Иконка logout -->
+    <ImageView
+        android:id="@+id/logoutIcon"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="27dp"
+        android:layout_marginTop="29dp"
+        android:contentDescription="@string/logout_icon"
+        android:src="@drawable/logout" />
+    <!-- Попап (изначально скрыт) -->
+    <RelativeLayout
+        android:id="@+id/wordAddedPopup"
+        android:layout_width="186dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginStart="174dp"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/rectangle_271"
+        android:visibility="gone"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/alegreya_sans"
+            android:textStyle="normal"
+            android:textSize="18sp"
+            android:textColor="?attr/text"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:text="Слово добавлено в сет"/>
+    </RelativeLayout>
+
+    <!-- Основная форма -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/selectedSetTitle"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/rectangle_1" />
+
+    <!-- Таймер -->
+    <TextView
+        android:id="@+id/roundTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/selectedSetTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="106dp"
+        android:fontFamily="@font/alegreya_sans"
+        android:text="00:00"
+        android:textColor="?attr/text"
+        android:textSize="34sp"
+        android:textStyle="normal" />
+
+    <!-- Контейнер слов с анимацией переворота -->
+    <RelativeLayout
+        android:id="@+id/WordContainer"
+        android:layout_width="298dp"
+        android:layout_height="295dp"
+        android:layout_below="@id/roundTimer"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="22dp"
+        android:background="@drawable/rectangle_551"
+        android:clipChildren="false"
+        android:clipToPadding="false">
+
+        <TextView
+            android:id="@+id/wordText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/abel"
+            android:gravity="center"
+            android:text="Word"
+            android:textColor="?attr/text"
+            android:textSize="40sp"
+            android:textStyle="normal"
+            tools:text="Paris" />
+    </RelativeLayout>
+
+    <!-- Контейнер кнопок -->
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/WordContainer"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15.5dp">
+
+        <!-- Левая кнопка "Пропустить" -->
+        <FrameLayout
+            android:id="@+id/leftButton"
+            android:layout_width="130dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="21dp"
+            android:layout_toStartOf="@id/centerButton"
+            android:background="@drawable/rectangle_266">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/alegreya_sans"
+                android:gravity="center"
+                android:text="Пропустить"
+                android:textColor="?attr/text"
+                android:textSize="18sp"
+                android:textStyle="normal" />
+        </FrameLayout>
+
+        <!-- Центральная кнопка переворота -->
+        <FrameLayout
+            android:id="@+id/centerButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/ellipse_5">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/abel"
+                android:gravity="center"
+                android:text="+"
+                android:textColor="?attr/text"
+                android:textSize="22sp"
+                android:textStyle="normal" />
+        </FrameLayout>
+
+        <!-- Правая кнопка "Следующее" -->
+        <FrameLayout
+            android:id="@+id/rightButton"
+            android:layout_width="230dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="21dp"
+            android:layout_toEndOf="@id/centerButton"
+            android:background="@drawable/rectangle_26611">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/alegreya_sans"
+                android:gravity="center"
+                android:text="Следующее"
+                android:textColor="?attr/text"
+                android:textSize="18sp"
+                android:textStyle="normal" />
+        </FrameLayout>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_margin="12dp"
+    android:background="@drawable/rectangle_241"
+    android:paddingTop="10dp"
+    android:paddingBottom="16dp"
+    android:paddingStart="9dp"
+    android:paddingEnd="9dp"
+    android:gravity="center_horizontal">
+
+    <!-- Плашка слова -->
+    <TextView
+        android:id="@+id/textForeignWord"
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:background="@drawable/rectangle_251"
+        android:text="Слово"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:textColor="?attr/text"
+        android:textSize="16sp"
+        android:fontFamily="@font/abel"
+        android:gravity="center_vertical"/>
+
+    <!-- Плашка перевода -->
+    <TextView
+        android:id="@+id/textTranslation"
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:layout_marginTop="9dp"
+        android:background="@drawable/rectangle_251"
+        android:text="Перевод"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:textColor="?attr/text"
+        android:textSize="16sp"
+        android:fontFamily="@font/abel"
+        android:gravity="center_vertical"/>
+</LinearLayout>

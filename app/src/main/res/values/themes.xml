@@ -1,0 +1,95 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Светлая тема -->
+    <style name="Theme.Language" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="form_shape_color">@color/green_BRIGHT</item>
+        <item name="blue_violet">@color/green_BRIGHT</item>
+        <item name="button_1">@color/light_orange</item>
+        <item name="button_2">@color/light_purple</item>
+        <item name="backgroundColor">@color/primary_color</item>
+        <item name="edit_text">@color/primary_color</item>
+
+        <item name="darcblue_violet">@color/yellow</item>
+
+        <item name="darkblue_green">@color/yellow</item>
+        <item name="red_green">@color/light_orange</item>
+        <item name="darkblue_orange">@color/yellow</item>
+        <item name="red_yellow">@color/light_orange</item>
+        <item name="lavander_orange">@color/light_purple</item>
+        <item name="red_white">@color/light_orange</item>
+        <item name="lavander_violet">@color/light_purple</item>
+        <item name="white_orange">@color/primary_color</item>
+        <item name="blue_white">@color/green_BRIGHT</item>
+        <item name="text">@color/text_color</item>
+        <item name="dialog">@color/light_orange</item>
+        <item name="text_success">@color/result_success_dark</item>
+        <item name="text_failure">@color/result_failure_dark</item>
+        <item name="homeIcon">@drawable/home</item>
+
+    </style>
+
+    <!-- Яркая тема -->
+    <style name="Theme.Language.Bright" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="form_shape_color">@color/bright_green</item>
+
+        <item name="button_1">@color/bright_orange</item>
+        <item name="button_2">@color/bright_orange</item>
+        <item name="backgroundColor">@color/bright_primary</item>
+        <item name="edit_text">@color/bright_primary</item>
+
+        <item name="darcblue_violet">@color/bright_purple</item>
+
+        <item name="darkblue_green">@color/bright_green</item>
+
+        <item name="red_green">@color/bright_green</item>
+        <item name="darkblue_orange">@color/bright_orange</item>
+        <item name="red_yellow">@color/bright_yellow</item>
+        <item name="blue_violet">@color/bright_purple</item>
+        <item name="lavander_orange">@color/bright_orange</item>
+        <item name="red_white">@color/bright_primary</item>
+        <item name="lavander_violet">@color/bright_purple</item>
+        <item name="white_orange">@color/bright_orange</item>
+        <item name="blue_white">@color/bright_primary</item>
+        <item name="text">@color/text_color</item>
+        <item name="dialog">@color/bright_green</item>
+
+        <item name="text_success">@color/result_success</item>
+        <item name="text_failure">@color/result_failure</item>
+
+        <item name="homeIcon">@drawable/home_bright</item>
+
+
+    </style>
+
+    <!-- Темная тема -->
+    <style name="Theme.Language.Dark" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="backgroundColor">@color/primary_color_dark</item>
+        <item name="form_shape_color">@color/green_BRIGHT_dark</item>
+        <item name="button_1">@color/light_purple_dark</item>
+        <item name="button_2">@color/light_purple_dark</item>
+        <item name="darcblue_violet">@color/light_purple_dark</item>
+        <item name="darkblue_green">@color/green_BRIGHT_dark</item>
+        <item name="red_green">@color/light_purple_dark</item>
+        <item name="edit_text">@color/green_BRIGHT_dark</item>
+        <item name="darkblue_orange">@color/green_BRIGHT_dark</item>
+
+        <item name="red_yellow">@color/purple_dark</item>
+        <item name="blue_violet">@color/light_purple_dark</item>
+        <item name="lavander_orange">@color/light_purple_dark</item>
+        <item name="red_white">@color/green_BRIGHT_dark</item>
+        <item name="lavander_violet">@color/light_purple_dark</item>
+        <item name="white_orange">@color/primary_color_dark</item>
+        <item name="blue_white">@color/green_BRIGHT_dark</item>
+
+        <item name="colorPrimary">@color/light_purple_dark</item>
+        <item name="text">@color/text_color_dark</item>
+
+        <item name="dialog">@color/green_BRIGHT_dark</item>
+
+        <item name="text_success">@color/result_success_dark</item>
+        <item name="text_failure">@color/result_failure_dark</item>
+
+        <item name="homeIcon">@drawable/home_dark</item>
+
+
+    </style>
+</resources>

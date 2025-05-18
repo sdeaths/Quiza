@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:background="@drawable/player_new"
+    android:layout_marginBottom="16dp">
+
+    <!-- Кружок для иконки -->
+    <FrameLayout
+        android:layout_width="59dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="13dp"
+        android:id="@+id/player_icon">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/ellipse_7" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:textSize="32sp"
+            android:textColor="?attr/text"
+            android:fontFamily="@font/abel"
+            android:gravity="center"
+            android:layout_gravity="center"/>
+    </FrameLayout>
+
+    <!-- Никнейм игрока -->
+    <TextView
+        android:id="@+id/player_nickname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginBottom="28dp"
+        android:text="Добавить игрока"
+        android:textSize="20sp"
+        android:textColor="?attr/text"
+        android:fontFamily="@font/alegreya_sans"
+        android:textStyle="normal"/>
+</RelativeLayout>

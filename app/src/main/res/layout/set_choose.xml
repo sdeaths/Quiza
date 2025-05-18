@@ -1,0 +1,143 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="?attr/form_shape_color"
+    android:gravity="center_horizontal">
+
+    <!-- Верхний поисковый блок -->
+    <FrameLayout
+        android:layout_width="319dp"
+        android:layout_height="50dp"
+        android:background="@drawable/rectangle2555"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginEnd="20dp">
+
+        <!-- Иконка поиска -->
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/iconly_light_search"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginBottom="13dp"/>
+
+        <!-- Текстовое поле для поиска -->
+        <EditText
+            android:id="@+id/searchField"
+            android:layout_width="209.6dp"
+            android:layout_height="48dp"
+            android:fontFamily="@font/a_bee_zee"
+            android:textStyle="normal"
+            android:textSize="18sp"
+            android:textColor="?attr/text"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="53.2dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:hint="Поиск..."
+            android:background="@android:color/transparent"/>
+
+    </FrameLayout>
+
+    <!-- Основной контейнер (Вторая форма) -->
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/rectangle_28"
+        android:layout_marginTop="16dp">
+
+        <!-- Заголовок "Наборы" -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/abel"
+            android:textStyle="normal"
+            android:textSize="24sp"
+            android:textColor="?attr/text"
+            android:text="Sets"
+            android:layout_marginTop="25dp"
+            android:layout_marginStart="20dp"/>
+
+        <!-- RecycleView для наборов -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/sets_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:layout_marginStart="21dp"
+            android:layout_marginEnd="20dp"/>
+
+        <!-- Кнопка (появляется при выборе хотя бы одного сета) -->
+        <FrameLayout
+            android:id="@+id/confirm_button"
+            android:layout_width="106dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/rectangle_277"
+            android:layout_gravity="end|bottom"
+            android:visibility="gone">
+
+            <!-- Текст на кнопке -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/alegreya_sans"
+                android:textStyle="normal"
+                android:textSize="20sp"
+                android:textColor="?attr/text"
+                android:gravity="center"
+                android:text="Далее"
+                android:layout_gravity="center" />
+        </FrameLayout>
+
+
+    </FrameLayout>
+
+    <!-- Нижняя форма -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="79dp"
+        android:background="@drawable/union"
+        android:layout_gravity="bottom">
+
+        <!-- Иконка Folder (по центру) -->
+        <ImageView
+            android:id="@+id/icon_folder"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/folder"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="27dp"
+            android:layout_marginBottom="28dp"/>
+
+        <!-- Иконка Profile (слева на 69dp от центра) -->
+        <ImageView
+            android:id="@+id/icon_profile"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/profile"
+            android:layout_marginTop="27dp"
+            android:layout_marginBottom="28dp"
+            android:layout_toStartOf="@id/icon_folder"
+            android:layout_marginEnd="69dp"/>
+
+        <!-- Иконка Home (справа на 69dp от центра) -->
+        <ImageView
+            android:id="@+id/icon_home"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/home_light"
+            android:layout_marginTop="27dp"
+            android:layout_marginBottom="28dp"
+            android:layout_toEndOf="@id/icon_folder"
+            android:layout_marginStart="69dp"/>
+    </RelativeLayout>
+
+</LinearLayout>

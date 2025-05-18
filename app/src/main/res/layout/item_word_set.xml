@@ -1,0 +1,26 @@
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="150dp"
+    android:layout_height="150dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/set_item_background"
+    android:layout_margin="8dp">
+
+    <!-- Название набора  -->
+    <TextView
+        android:id="@+id/setNameTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/abel"
+        android:textSize="36sp"
+        android:textColor="?attr/text"
+        android:textStyle="normal"
+        android:gravity="center_horizontal"
+        android:layout_margin="16dp"
+        android:breakStrategy="simple"
+        android:hyphenationFrequency="full"
+        android:maxLines="3"
+        android:ellipsize="end"
+        />
+</FrameLayout>

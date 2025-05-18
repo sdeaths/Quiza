@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <!-- Фоновый прямоугольник с внутренним контентом -->
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+        android:background="@drawable/rectangle_25"
+        android:elevation="4dp"
+        android:layout_centerInParent="true"
+        android:padding="15dp">
+
+        <!-- Поле для ввода -->
+        <EditText
+            android:id="@+id/name_input"
+            android:layout_width="280dp"
+            android:layout_height="59dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/rectangle_255"
+            android:padding="10dp"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:hint="Введите имя..."
+            android:fontFamily="@font/alegreya_sans"
+            android:gravity="center_vertical"/>
+
+        <!-- Кнопка подтверждения -->
+        <RelativeLayout
+        android:id="@+id/confirm_button"
+        android:layout_width="81dp"
+        android:layout_height="29dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/rectangle_26"
+        android:clickable="true"
+        android:focusable="true">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Добавить"
+            android:fontFamily="@font/alegreya_sans"
+            android:textSize="14sp"
+            android:textColor="?attr/text"
+            android:gravity="center"
+            android:textAllCaps="false"/>
+    </RelativeLayout>
+
+
+    </RelativeLayout>
+</RelativeLayout>

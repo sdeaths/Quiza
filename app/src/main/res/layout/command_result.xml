@@ -1,0 +1,109 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/rectangle_288">
+
+    <!-- Заголовок выбранных сетов -->
+    <TextView
+        android:id="@+id/teamSets"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginTop="27dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:fontFamily="@font/abel"
+        android:textColor="?attr/text"
+        android:textSize="24sp"
+        android:textStyle="normal"
+        android:text="Мой набор, набор для путешествий"
+        android:contentDescription="Text displaying the selected sets" />
+
+    <!-- Иконка выхода из системы -->
+    <ImageView
+        android:id="@+id/logoutIcon"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="27dp"
+        android:layout_marginTop="29dp"
+        android:contentDescription="@string/logout_icon"
+        android:src="@drawable/logout" />
+
+    <!-- Основная форма -->
+    <RelativeLayout
+        android:id="@+id/mainForm"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/teamSets"
+        android:layout_marginTop="27dp"
+        android:background="@drawable/rectangle_1">
+
+        <LinearLayout
+            android:id="@+id/playerStatsContainer"
+            android:layout_width="315dp"
+            android:layout_height="310dp"
+            android:layout_marginTop="147dp"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:background="@drawable/rectangle_551"
+            android:orientation="vertical"
+            android:clipChildren="false"
+            android:clipToPadding="false">
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="0dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/playerStatsRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:padding="12dp"
+                android:layout_margin="10dp"
+                android:clipToPadding="false"
+                android:contentDescription="Список статистики игроков"
+                tools:listitem="@layout/item_player_result" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="15dp" />
+
+        </LinearLayout>
+
+        <!-- Кнопка «Далее» под WordContainer с отступом 15dp -->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/playerStatsContainer"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="24dp">
+
+            <FrameLayout
+                android:id="@+id/leftButton"
+                android:layout_width="199dp"
+                android:layout_height="41dp"
+                android:layout_marginEnd="21dp"
+                android:background="@drawable/rectangle_266">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/alegreya_sans"
+                    android:gravity="center"
+                    android:text="Следующий раунд"
+                    android:textColor="?attr/text"
+                    android:textSize="18sp"
+                    android:textStyle="normal"
+                    android:contentDescription="Button to proceed to the next round" />
+            </FrameLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

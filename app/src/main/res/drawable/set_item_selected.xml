@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Внешняя рамка с черной обводкой -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="?attr/darcblue_violet"/>
+            <stroke
+                android:width="2dp"
+                android:color="#000000"/> <!-- Черная обводка -->
+            <corners android:radius="10dp"/>
+        </shape>
+    </item>
+
+    <!-- Внутренний оранжевый прямоугольник с черной обводкой и отступами -->
+    <item android:top="5dp" android:bottom="5dp" android:start="5dp" android:end="5dp">
+        <shape android:shape="rectangle">
+            <solid android:color="?attr/button_1"/>
+            <stroke
+                android:width="2dp"
+                android:color="#000000"/> <!-- Черная обводка -->
+            <corners android:radius="10dp"/>
+        </shape>
+    </item>
+
+</layer-list>

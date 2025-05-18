@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Цвета для яркой темы -->
+    <color name="bright_primary">#FFFAF0</color>
+    <color name="bright_green">#abe5bc</color>
+    <color name="bright_orange">#ffa776</color>
+    <color name="bright_purple">#cfade8</color>
+    <color name="bright_yellow">#ffd787</color>
+
+    <!-- Цвета текста -->
+    <color name="text_color">#000000</color>
+    <color name="result_success">#25B700</color>
+    <color name="result_failure">#FF0000</color>
+    <color name="result_success_dark">#ABE5C9</color>
+    <color name="result_failure_dark">#FFA776</color>
+
+    <!-- Цвета переключателей -->
+    <color name="active_switch">#FFA776</color>
+    <color name="switch_track">#D2D5DA</color>
+
+    <!-- Цвета для обычной темы -->
+    <color name="primary_color">#F7EEE5</color>
+    <color name="green_BRIGHT">#74939E</color>
+    <color name="light_orange">#C67B75</color>
+    <color name="light_purple">#A0939F</color>
+    <color name="yellow">#3C5377</color>
+
+    <!-- Цвета для темной темы -->
+    <color name="primary_color_dark">#636372</color>
+    <color name="green_BRIGHT_dark">#45654E</color>
+    <color name="light_orange_dark">#FFA776</color>
+    <color name="light_purple_dark">#504060</color>
+    <color name="purple_dark">#68548A</color>
+    <color name="text_color_dark">#FFFFFF</color>
+
+</resources>

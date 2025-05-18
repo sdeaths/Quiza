@@ -1,0 +1,183 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="?attr/form_shape_color"
+    android:gravity="center_horizontal">
+
+    <!-- Верхний поисковый блок -->
+    <FrameLayout
+        android:layout_width="319dp"
+        android:layout_height="50dp"
+        android:background="@drawable/rectangle2555"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginEnd="20dp">
+
+        <!-- Иконка поиска -->
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/iconly_light_search"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginBottom="13dp"/>
+
+        <!-- Текстовое поле -->
+        <TextView
+            android:layout_width="209.6dp"
+            android:layout_height="20dp"
+            android:fontFamily="@font/a_bee_zee"
+            android:textStyle="normal"
+            android:textSize="18sp"
+            android:textColor="?attr/text"
+            tools:text="Поиск.."
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="53.2dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"/>
+    </FrameLayout>
+
+    <!-- Основной контейнер (Вторая форма) -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/rectangle_28"
+        android:layout_marginTop="16dp">
+
+        <!-- Заголовок "Выберите язык" -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/alegreya_sans"
+            android:textStyle="normal"
+            android:textSize="28sp"
+            android:textColor="?attr/text"
+            android:text="Выберите язык"
+
+            android:layout_marginTop="25dp"
+            android:layout_marginStart="23dp"
+            android:layout_gravity="start"/>
+
+        <!-- Контейнер для плашек -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="81dp"
+            android:layout_marginStart="21dp">
+
+            <!-- Плашка 1 -->
+            <FrameLayout
+                android:id="@+id/english_button"
+                android:layout_width="320dp"
+                android:layout_height="80dp"
+                android:background="@drawable/rectangle241">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/abel"
+                    android:textStyle="normal"
+                    android:textSize="32sp"
+                    android:textColor="?attr/text"
+                    android:layout_marginTop="19dp"
+                    android:layout_marginStart="20dp"
+                    android:text="English"/>
+            </FrameLayout>
+
+            <!-- Отступ между плашками -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@android:color/transparent"/>
+
+            <!-- Плашка 2 -->
+            <FrameLayout
+                android:id="@+id/french_button"
+                android:layout_width="320dp"
+                android:layout_height="80dp"
+                android:background="@drawable/rectangle241">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/abel"
+                    android:textStyle="normal"
+                    android:textSize="32sp"
+                    android:textColor="?attr/text"
+                    android:layout_marginTop="19dp"
+                    android:layout_marginStart="20dp"
+                    android:text="Français"/>
+            </FrameLayout>
+
+            <!-- Отступ между плашками -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@android:color/transparent"/>
+
+            <!-- Плашка 3 -->
+            <FrameLayout
+                android:id="@+id/german_button"
+                android:layout_width="320dp"
+                android:layout_height="80dp"
+                android:background="@drawable/rectangle241">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/abel"
+                    android:textStyle="normal"
+                    android:textSize="32sp"
+                    android:textColor="?attr/text"
+                    android:layout_marginTop="19dp"
+                    android:layout_marginStart="20dp"
+                    android:text="Deutsch"/>
+            </FrameLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+    <!-- Нижняя форма -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="79dp"
+        android:background="@drawable/union"
+        android:layout_gravity="bottom">
+
+        <!-- Иконка Folder (по центру) -->
+        <ImageView
+            android:id="@+id/icon_folder"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/folder"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="27dp"
+            android:layout_marginBottom="28dp"/>
+
+        <!-- Иконка Profile (слева на 69dp от центра) -->
+        <ImageView
+            android:id="@+id/icon_profile"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/profile"
+            android:layout_marginTop="27dp"
+            android:layout_marginBottom="28dp"
+            android:layout_toStartOf="@id/icon_folder"
+            android:layout_marginEnd="69dp"/>
+
+        <!-- Иконка Home (справа на 69dp от центра) -->
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="?attr/homeIcon"
+            android:layout_marginTop="27dp"
+            android:layout_marginBottom="28dp"
+            android:layout_toEndOf="@id/icon_folder"
+            android:layout_marginStart="69dp"/>
+    </RelativeLayout>
+
+</LinearLayout>

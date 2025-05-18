@@ -1,0 +1,20 @@
+<!-- item_word_set.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="160dp"
+    android:layout_height="100dp"
+    android:background="@drawable/rectangle_244"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/abel"
+        android:textStyle="normal"
+        android:textSize="36sp"
+        android:textColor="#1e1e1e"
+        android:gravity="center_horizontal"
+        android:text="Set Name"/>
+
+</LinearLayout>

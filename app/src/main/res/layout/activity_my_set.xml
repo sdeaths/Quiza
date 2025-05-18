@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/blue_white">
+
+    <!-- Заголовок -->
+    <TextView
+        android:id="@+id/customSetTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="30dp"
+        android:fontFamily="@font/abel"
+        android:textStyle="normal"
+        android:textSize="24sp"
+        android:textColor="?attr/text"
+        android:text="My English Set" />
+
+    <!-- Иконка выхода -->
+    <ImageView
+        android:id="@+id/logoutIcon"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="27dp"
+        android:layout_marginTop="29dp"
+        android:contentDescription="@string/logout_icon"
+        android:src="@drawable/logout" />
+
+    <!-- Основная форма -->
+    <RelativeLayout
+        android:id="@+id/mainForm"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/customSetTitle"
+        android:layout_above="@+id/navigationBar"
+        android:layout_marginTop="27dp"
+        android:background="@drawable/rectangle_1">
+
+        <!-- RecyclerView со словами -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/wordsRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="22dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:clipToPadding="false"
+            android:paddingBottom="16dp"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+
+    <!-- Нижняя панель навигации (исправленная версия с сохранением размера кнопки +) -->
+    <RelativeLayout
+        android:id="@+id/navigationBar"
+        android:layout_width="match_parent"
+        android:layout_height="79dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/union">
+
+        <!-- Кнопка "+" по центру (сохраняем исходный размер 30dp) -->
+        <RelativeLayout
+            android:id="@+id/centerButton"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/ellipse_5">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/abel"
+                android:textStyle="normal"
+                android:textSize="20sp"
+                android:textColor="?attr/text"
+                android:gravity="center"
+                android:text="+" />
+        </RelativeLayout>
+
+        <!-- Иконка профиля слева (24dp как во втором активити) -->
+        <ImageView
+            android:id="@+id/profileIcon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="27dp"
+            android:layout_toStartOf="@id/centerButton"
+            android:layout_marginEnd="66dp"
+            android:src="@drawable/profile"
+            android:contentDescription="@string/profile_icon" />
+
+        <!-- Иконка Home справа (24dp как во втором активити) -->
+        <ImageView
+            android:id="@+id/homeIcon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="27dp"
+            android:layout_toEndOf="@id/centerButton"
+            android:layout_marginStart="66dp"
+            android:src="@drawable/home_light"
+            android:contentDescription="@string/home" />
+    </RelativeLayout>
+
+    <!-- Всплывающее окно добавления слова -->
+    <RelativeLayout
+        android:id="@+id/newWordPopup"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="360dp"
+        android:background="@drawable/rectangle_29"
+        android:visibility="gone"
+        android:elevation="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true">
+
+            <TextView
+                android:id="@+id/editTextTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/alegreya_sans"
+                android:textStyle="normal"
+                android:textSize="36sp"
+                android:textColor="#000000"
+                android:text="Новое слово"
+                android:layout_marginTop="29dp"
+                android:layout_marginStart="39dp" />
+
+            <LinearLayout
+                android:id="@+id/wordBox"
+                android:layout_width="289dp"
+                android:layout_height="50dp"
+                android:background="@drawable/rectangle_253"
+                android:layout_below="@id/editTextTitle"
+                android:layout_marginTop="28dp"
+                android:layout_centerHorizontal="true"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <EditText
+                    android:id="@+id/wordInput"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="28dp"
+                    android:fontFamily="@font/a_bee_zee"
+                    android:textSize="14sp"
+                    android:textColor="#505050"
+                    android:hint="Слово"
+                    android:inputType="text"
+                    android:background="@null"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/translationBox"
+                android:layout_width="289dp"
+                android:layout_height="50dp"
+                android:background="@drawable/rectangle_253"
+                android:layout_below="@id/wordBox"
+                android:layout_marginTop="23dp"
+                android:layout_centerHorizontal="true"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <EditText
+                    android:id="@+id/translationInput"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="28dp"
+                    android:fontFamily="@font/a_bee_zee"
+                    android:textSize="14sp"
+                    android:textColor="#505050"
+                    android:hint="Перевод"
+                    android:inputType="text"
+                    android:background="@null"/>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/submitButton"
+                android:layout_width="288.7dp"
+                android:layout_height="53.1dp"
+                android:layout_below="@id/translationBox"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/rectangle_261"
+                android:gravity="center"
+                android:text="Сохранить"
+                android:textColor="#000000"
+                android:textSize="24sp"
+                android:textAllCaps="false"
+                android:fontFamily="@font/alegreya_sans"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <!-- Всплывающее окно редактирования слова -->
+    <RelativeLayout
+        android:id="@+id/editWordPopup"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="360dp"
+        android:background="@drawable/rectangle_29"
+        android:visibility="gone"
+        android:elevation="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true">
+
+            <TextView
+                android:id="@+id/editWordTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/alegreya_sans"
+                android:textStyle="normal"
+                android:textSize="36sp"
+                android:textColor="#000000"
+                android:text="Изменить"
+                android:layout_marginTop="29dp"
+                android:layout_marginStart="39dp" />
+
+            <LinearLayout
+                android:id="@+id/editWordBox"
+                android:layout_width="289dp"
+                android:layout_height="50dp"
+                android:background="@drawable/rectangle_253"
+                android:layout_below="@id/editWordTitle"
+                android:layout_marginTop="28dp"
+                android:layout_centerHorizontal="true"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <EditText
+                    android:id="@+id/editWordInput"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="28dp"
+                    android:fontFamily="@font/a_bee_zee"
+                    android:textSize="14sp"
+                    android:textColor="#505050"
+                    android:hint="Слово"
+                    android:inputType="text"
+                    android:background="@null"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/editTranslationBox"
+                android:layout_width="289dp"
+                android:layout_height="50dp"
+                android:background="@drawable/rectangle_253"
+                android:layout_below="@id/editWordBox"
+                android:layout_marginTop="23dp"
+                android:layout_centerHorizontal="true"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <EditText
+                    android:id="@+id/editTranslationInput"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="28dp"
+                    android:fontFamily="@font/a_bee_zee"
+                    android:textSize="14sp"
+                    android:textColor="#505050"
+                    android:hint="Перевод"
+                    android:inputType="text"
+                    android:background="@null"/>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/editSubmitButton"
+                android:layout_width="288.7dp"
+                android:layout_height="53.1dp"
+                android:layout_below="@id/editTranslationBox"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/rectangle_261"
+                android:gravity="center"
+                android:text="Сохранить"
+                android:textColor="#000000"
+                android:textSize="24sp"
+                android:textAllCaps="false"
+                android:fontFamily="@font/alegreya_sans"/>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

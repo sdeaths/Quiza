@@ -1,0 +1,122 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="?attr/form_shape_color"
+    android:gravity="center_horizontal">
+
+    <!-- Логотип -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/form_shape_color"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/logo_image"
+            android:layout_width="184dp"
+            android:layout_height="175dp"
+            android:contentDescription="Логотип приложения"
+            android:src="@drawable/quiza_logo_1" />
+    </LinearLayout>
+
+    <!-- Основной контейнер -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:background="@drawable/rectangle_554"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:clipToPadding="false"
+        android:clipChildren="false">
+
+        <!-- Темная тема -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="56dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/alegreya_sans"
+                android:textStyle="normal"
+                android:textSize="30sp"
+                android:textColor="?attr/text"
+                android:layout_marginStart="35dp"
+                android:contentDescription="Темная тема"
+                android:text="Темная тема"
+                tools:ignore="HardcodedText" />
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/dark_theme_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="51dp"/>
+        </LinearLayout>
+
+        <!-- Светлая тема -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/alegreya_sans"
+                android:textStyle="normal"
+                android:textSize="30sp"
+                android:textColor="?attr/text"
+                android:layout_marginStart="35dp"
+                android:contentDescription="Светлая тема"
+                android:text="Светлая тема"
+                tools:ignore="HardcodedText" />
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/light_theme_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="51dp"/>
+        </LinearLayout>
+
+        <!-- Яркая тема -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/alegreya_sans"
+                android:textStyle="normal"
+                android:textSize="30sp"
+                android:textColor="?attr/text"
+                android:layout_marginStart="35dp"
+                android:contentDescription="Яркая тема"
+                android:text="Яркая тема"
+                tools:ignore="HardcodedText" />
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/bright_theme_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="51dp"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

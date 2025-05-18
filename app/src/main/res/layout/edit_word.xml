@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="433dp"
+    android:background="@drawable/rectangle_29"
+    android:layout_marginTop="360dp"
+    android:layout_marginStart="0dp"
+    android:layout_marginEnd="0dp">
+
+    <!-- Текст "Изменить" с ID -->
+    <TextView
+        android:id="@+id/editTextTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/alegreya_sans"
+        android:textStyle="normal"
+        android:textSize="36sp"
+        android:textColor="?attr/text"
+        android:text="Изменить"
+        android:layout_marginTop="29dp"
+        android:layout_marginStart="39dp" />
+
+    <!-- Окошко для слова -->
+    <LinearLayout
+        android:id="@+id/wordBox"
+        android:layout_width="289dp"
+        android:layout_height="50dp"
+        android:background="@drawable/rectangle_253"
+        android:layout_below="@id/editTextTitle"
+        android:layout_marginTop="28dp"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <!-- Текст внутри окошка для слова -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/a_bee_zee"
+            android:textStyle="normal"
+            android:textSize="14sp"
+            android:textColor="?attr/text"
+            android:text="Слово"
+            android:layout_marginStart="28dp"/>
+    </LinearLayout>
+
+    <!-- Окошко для перевода -->
+    <LinearLayout
+        android:id="@+id/translationBox"
+        android:layout_width="289dp"
+        android:layout_height="50dp"
+        android:background="@drawable/rectangle_253"
+        android:layout_below="@id/wordBox"
+        android:layout_marginTop="23dp"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <!-- Текст внутри окошка для перевода -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/a_bee_zee"
+            android:textStyle="normal"
+            android:textSize="14sp"
+            android:textColor="?attr/text"
+            android:text="Перевод"
+            android:layout_marginStart="28dp"/>
+    </LinearLayout>
+
+    <!-- Кнопка -->
+    <RelativeLayout
+        android:id="@+id/submitButton"
+        android:layout_width="288.7dp"
+        android:layout_height="53.1dp"
+        android:layout_below="@id/translationBox"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/rectangle_261"
+        android:clickable="true"
+        android:focusable="true">
+
+        <TextView
+            android:id="@+id/submitButtonText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Сохранить"
+            android:textColor="?attr/text"
+            android:textSize="24sp"
+            android:textAllCaps="false"
+            android:fontFamily="@font/alegreya_sans"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+
+
+</RelativeLayout>
